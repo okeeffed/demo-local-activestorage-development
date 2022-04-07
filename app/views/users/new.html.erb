@@ -1,6 +1,14 @@
 <h1>Users#new</h1>
 <%= form_with url: "/users" do |form| %>
-  <%= form.label :avatar, "Avatar" %>
-  <%= form.file_field :avatar %>
-  <%= form.submit "Submit" %>
+  <div>
+    <%= form.label :name, "Name" %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :avatar, "Avatar" %>
+    <%= form.file_field :avatar %>
+  </div>
+  <div>
+    <%= form.submit "Submit" %>
+  </div>
 <% end %>

@@ -3,6 +3,13 @@
 ## Steps to reproduce this repo
 
 ```s
+# Only imagemagick is needed, but the
+# others are for video previews and
+# PDF previews
+$ brew install imagemagick poppler ffmpeg
+```
+
+```s
 # Create new
 $ rails new demo-activestorage-development
 ```
@@ -23,7 +30,7 @@ At this point, we need to create a record that has an attachment. We can followi
 
 ```s
 # Generate the model
-$ bin/rails g model User avatar:attachment
+$ bin/rails g model User name:string avatar:attachment
 $ bin/rails db:migrate
 ```
 
@@ -31,7 +38,7 @@ Let's also generate a User controller and view to test an upload.
 
 ```s
 # Generate controller
-$ bin/rails g controller User index create
+$ bin/rails g controller Users index create show new
 ```
 
 Update the routes.
@@ -43,3 +50,5 @@ end
 ```
 
 Update the controllers.
+
+Update the view.

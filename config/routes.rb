@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resource :users, only: %i[index create new show]
+  resources :users
 
   # Defines the root path route ("/")
   # root 'users#index'
